@@ -12,6 +12,16 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        Rotate: {
+          'from': {transform: 'rotate(0deg)'},
+          'to': {transform: 'rotate(180deg)'},
+        }
+      },
+
+      animation: {
+        rotate: 'Rotate 2s linear infinite'
+      }
     },
   },
   plugins: [],
