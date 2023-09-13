@@ -23,12 +23,12 @@ function Scene_three() {
 
 function Object_scene() {
     
-    // const t = useCubeTexture(["px.png", "nx.png", "py.png", "ny.png", "pz.png", "nz.png"],
-    // {path: "mri/"})
+    const t = useCubeTexture(["px.png", "nx.png", "py.png", "ny.png", "pz.png", "nz.png"],
+    {path: "/assets/images/"})
 
     return (
         <Torus args={[1.48, 0.72, 30, 200, 6.2831]}>
-            <meshBasicMaterial color={"#E6E6FA"}  />
+            <meshBasicMaterial color={"#E6E6FA"} envMap={t} />
         </Torus>
     )
 }

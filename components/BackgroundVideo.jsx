@@ -4,7 +4,7 @@ import Hero from "./Hero"
 
 export default function BackgroundVideo({videopath, children}) {
 
-    const path_video = "./assets/videos/video-xd.mp4"
+    const path_video = "/assets/videos/video-xd.mp4"
   return (
     <>
         <div className="relative ovdiverflow-hidden w-full h-full">
