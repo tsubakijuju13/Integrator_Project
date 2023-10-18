@@ -1,9 +1,8 @@
 "use client"
 import { Text, useGLTF } from "@react-three/drei";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Color } from "three";
-import { useTypewriter } from 'react-simple-typewriter'
-import EyeAnimation from "./Eye";
+
 
 
 function Texto_to_show(props) {
