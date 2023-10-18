@@ -1,7 +1,8 @@
-import World from "./World";
+import WorldAnya from "./WorldAnya";
+
 
 export default function page() {
-  return (
-    <World />
+  return(
+    <WorldAnya />
   )
 }

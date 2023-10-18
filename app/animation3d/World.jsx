@@ -1,5 +1,5 @@
 "use client"
-import { Cloud, OrbitControls, Sky, useHelper } from "@react-three/drei";
+import { Cloud, Environment, OrbitControls, Sky, useHelper } from "@react-three/drei";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
@@ -11,6 +11,7 @@ function Ambient() {
 
   return (
       <>
+          <Environment files={'/assets/environment/environ.hdr'} background={true}/>
           <Sky distance={10} sunPosition={[0,30,0]}/>
           <ambientLight intensity={1} />
           <directionalLight position={[10,10,10]} intensity={2.5} />
@@ -1123,7 +1124,7 @@ function Figure(props) {
 
 export default function World() {
   return (
-    <Canvas>
+    <Canvas >
         <Ambient />
         <Figure scale={0.5} position={[0, 0.05, 0]}/>
         <Terrain />
