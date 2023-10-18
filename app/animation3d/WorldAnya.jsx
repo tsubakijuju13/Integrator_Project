@@ -4,7 +4,7 @@ import { Sky, OrbitControls } from "@react-three/drei"
 import { useState } from "react";
 import { Model as Room } from "./Room"
 import { Anya } from "./Anya"
-import EyeAnimation from "./Eye";
+import EyeAnimation from "./eye";
 
 function Light() {
   return(
