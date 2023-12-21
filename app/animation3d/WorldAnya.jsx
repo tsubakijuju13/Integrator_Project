@@ -31,7 +31,7 @@ export default function WorldAnya() {
       <Room scale={0.5} position={[0, -1, 0]} />
       <Anya 
         scale={2} 
-        position={[-4.3,-1.85,0]}
+        position={[4,-1.85,0]}
         rotation={[0,1,0]} 
         setBack={() => setCameraFace(0)} 
         viewAnya={cameraFace != 1}

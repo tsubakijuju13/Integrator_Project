@@ -1,8 +1,7 @@
 "use client"
 import { Text, useGLTF } from "@react-three/drei";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { Color } from "three";
-
 
 
 function Texto_to_show(props) {
@@ -27,7 +26,7 @@ function Texto_to_show(props) {
 export function Anya(props) {
     const [chat, setChat] = useState(false)
     const [index, setIndex] = useState(0)
-    const { nodes, materials } = useGLTF("/assets/models/anya.glb");
+    const { nodes, materials ,scene } = useGLTF("/assets/models/anya.glb");
 
     const showFirstText = () => {setChat(true)}
     const hideFirstText = () => {if (index == 0) setChat(false)}
@@ -41,6 +40,10 @@ export function Anya(props) {
             if (props.viewAnya) props.setViewAnya()
         }
     }
+
+    useLayoutEffect(() => {
+        scene.traverse((obj) => obj.isMesh && (obj.receiveShadow = obj.castShadow = true))
+    })
 
     /**
      * Necesito varios casos:
